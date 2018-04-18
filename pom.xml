@@ -1,0 +1,146 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>qiusama.nju.j2ee</groupId>
+  <artifactId>eTicket</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>eTicket Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <spring.version>5.0.3.RELEASE</spring.version>
+    <hibernate.version>5.2.12.Final</hibernate.version>
+    <mysql.version>6.0.6</mysql.version>
+    <junit.version>4.11</junit.version>
+    <c3p0.version>0.9.5.2</c3p0.version>
+    <javax.version>3.1.0</javax.version>
+    <jsp.version>2.3.1</jsp.version>
+    <jstl.version>1.2.1</jstl.version>
+    <tld.version>1.1.2</tld.version>
+    <mail.version>1.5.5</mail.version>
+    <spring.mail.version>4.2.5</spring.mail.version>
+  </properties>
+
+  <dependencies>
+
+      <dependency>
+          <groupId>org.springframework.integration</groupId>
+          <artifactId>spring-integration-mail</artifactId>
+          <version>${spring.mail.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>javax.mail</groupId>
+          <artifactId>javax.mail-api</artifactId>
+          <version>${mail.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.sun.mail</groupId>
+          <artifactId>javax.mail</artifactId>
+          <version>${mail.version}</version>
+      </dependency>
+      <!-- spring mvc配置相关 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+       <groupId>org.springframework</groupId>
+       <artifactId>spring-web</artifactId>
+       <version>${spring.version}</version>
+    </dependency>
+
+    <!-- 添加Hibernate依赖 -->
+    <dependency>
+       <groupId>org.hibernate</groupId>
+       <artifactId>hibernate-core</artifactId>
+       <version>${hibernate.version}</version>
+    </dependency>
+
+    <!-- Hibernate-C3P0 Integration -->
+    <dependency>
+       <groupId>org.hibernate</groupId>
+       <artifactId>hibernate-c3p0</artifactId>
+       <version>${hibernate.version}</version>
+    </dependency>
+
+    <!--c3p0连接池-->
+    <dependency>
+      <groupId>com.mchange</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>${c3p0.version}</version>
+    </dependency>
+
+    <!-- mysql配置-->
+    <dependency>
+       <groupId>mysql</groupId>
+       <artifactId>mysql-connector-java</artifactId>
+       <version>${mysql.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${javax.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- JSTL Dependency -->
+    <dependency>
+       <groupId>javax.servlet.jsp.jstl</groupId>
+       <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+       <version>${jstl.version}</version>
+    </dependency>
+
+    <dependency>
+       <groupId>taglibs</groupId>
+       <artifactId>standard</artifactId>
+       <version>${tld.version}</version>
+    </dependency>
+
+    <!-- JSP Dependency -->
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>${jsp.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-webmvc</artifactId>
+          <version>5.0.3.RELEASE</version>
+      </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>eTicket</finalName>
+  </build>
+</project>
